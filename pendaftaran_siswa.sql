@@ -1,5 +1,5 @@
-﻿# Host: localhost  (Version 5.5.5-10.1.38-MariaDB)
-# Date: 2022-06-07 12:08:09
+﻿# Host: localhost  (Version 5.5.5-10.4.21-MariaDB)
+# Date: 2022-06-07 21:49:26
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
 
@@ -33,3 +33,24 @@ CREATE TABLE `calon_siswa` (
 #
 
 INSERT INTO `calon_siswa` VALUES (1,'zilla pranandha putri','zilla','perempuan','duri,20 oktober 2003','islam','dokter','berenang,sepeda','indonesia','1','1','-','indonesia','smas it mutiara','082389096564','juara 1');
+
+#
+# Structure for table "user"
+#
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(255) DEFAULT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `konfir_password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+#
+# Data for table "user"
+#
+
+INSERT INTO `user` VALUES (2,'Raga Setia ','Wibawa','Ragasetia80@gmail.com','$2y$10$K4PM0RKCpdarHYQXvee1VOxvHI4mjWi7YTKH.D4GB46B/b9yJ5Jtu','$2y$10$lpNR8LVB6mRpyrGVRa5G6uD4a8f3NiNwVkDjD.0VQCt1SUbni2K5.'),(6,'Ferry','Richardo','ferryricardho@gmail.com','$2y$10$HIqIy/Szgh2tMktadd4Jges.vEKjDBDTZeCoZRfrPlwfJ4GZGZaZW','$2y$10$EtivuR4nWl82kQSPXyqXHObZOvCpueUQuFepTlh1fugI..MtvEuRK'),(7,'Zilla','pranandha','zillapranandhaputri@gmail.com','$2y$10$g8R08IG2UEgqd/IDjXYkDuxh7M42oLSf3VrdTjipQ2CfmiZUv3OdC','$2y$10$mrTmJmHGiCsxN/iINY1YIOaP1die9tsHT7Q0pymCEPDcsxgg.cnhG');
