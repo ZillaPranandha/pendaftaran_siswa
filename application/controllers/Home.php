@@ -11,6 +11,6 @@ class Home extends CI_Controller
     public function index()
     {
         $data['Title'] = 'SMA-IT Mutiara';
-        $this->load->view('home', $data);
+        $this->load->view('Home/home', $data);
     }
 }
