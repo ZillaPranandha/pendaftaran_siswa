@@ -13,4 +13,8 @@ class DB_Siswa extends CI_MOdel
     ];
     $this->db->insert('user', $data);
   }
+  public function TotalUser()
+  {
+    return $this->db->get('user')->num_rows();
+  }
 }
