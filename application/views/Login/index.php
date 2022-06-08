@@ -20,6 +20,7 @@
                   <?= $this->session->flashdata('Pesan'); ?>
                 </div>
               </div>
+              <?php $this->session->unset_userdata('Pesan'); ?>
             <?php endif; ?>
             <div class="card-body">
               <form method="POST" action="" class="needs-validation">

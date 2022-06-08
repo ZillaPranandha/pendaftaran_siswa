@@ -3,7 +3,11 @@
         <div class="section-header">
             <h1>Halaman Utama</h1>
         </div>
-        <div class="row d-flex justify-content-around">
+        <?php if ($this->session->flashdata('Oke')) : ?>
+            <?= $this->session->flashdata('Oke'); ?>
+            <?php $this->session->unset_userdata('Oke'); ?>
+        <?php endif; ?>
+        <div class="row d-flex justify-content-around"> 
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-primary">

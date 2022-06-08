@@ -41,7 +41,8 @@ class Pendaftaran extends CI_Controller
       $this->load->view('Template/Footer', $data);
     } else {
       $this->DB_Siswa->daftarSiswa();
-      redirect('Home');
+      $this->session->set_flashdata('Oke', '<div id="swal"></divi>');
+      redirect('Home/index');
     }
   }
 }

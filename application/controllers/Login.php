@@ -71,7 +71,7 @@ class Login extends CI_Controller
   }
   public function Logout()
   {
-    $this->session->sess_destroy();
+    $this->session->unset_userdata('email');
     $this->session->set_flashdata('Pesan', '<div class="alert alert-info" role="alert">
     Anda Berhasil <b>Logout</b>.
   </div>');
