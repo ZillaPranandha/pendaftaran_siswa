@@ -14,24 +14,10 @@
                 <h4 class="text-uppercase text-center text-success">Login</h2>
               </div>
             </div>
-            <?php if ($this->session->flashdata('Gagal')) : ?>
-              <div class="row justify-content-center" id="Alert">
-                <div class="col-lg-9">
-                  <?= $this->session->flashdata('Gagal'); ?>
-                </div>
-              </div>
-            <?php endif; ?>
             <?php if ($this->session->flashdata('Pesan')) : ?>
               <div class="row justify-content-center" id="Alert">
                 <div class="col-lg-9">
                   <?= $this->session->flashdata('Pesan'); ?>
-                </div>
-              </div>
-            <?php endif; ?>
-            <?php if ($this->session->flashdata('Berhasil')) : ?>
-              <div class="row justify-content-center" id="Alert">
-                <div class="col-lg-9">
-                  <?= $this->session->flashdata('Berhasil'); ?>
                 </div>
               </div>
             <?php endif; ?>

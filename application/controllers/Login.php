@@ -36,13 +36,13 @@ class Login extends CI_Controller
         $this->session->set_userdata($data);
         redirect('Home');
       } else {
-        $this->session->set_flashdata('Gagal', '<div class="alert alert-danger" role="alert">
+        $this->session->set_flashdata('Pesan', '<div class="alert alert-danger" role="alert">
         Password Anda <b> Salah<b>.
       </div>');
         redirect('Login');
       }
     } else {
-      $this->session->set_flashdata('Gagal', '<div class="alert alert-danger" role="alert">
+      $this->session->set_flashdata('Pesan', '<div class="alert alert-danger" role="alert">
       Akun anda tidak<b> terdaftar<b>.
     </div>');
       redirect('Login');
@@ -64,9 +64,8 @@ class Login extends CI_Controller
       $this->load->view('TemplateLogin/footer');
     } else {
       $this->DB_Siswa->Registration();
-      $this->session->set_flashdata('Berhasil', '<div class="alert alert-info" role="alert">
-      Akun berhasil <b>terdaftar</b>.
-    </div>');
+      $this->session->set_flashdata('Pesan', '<div class="alert alert-info" role="alert">
+      Akun berhasil <b>terdaftar</b>.</div>');
       redirect('Login');
     }
   }
