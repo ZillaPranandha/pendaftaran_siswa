@@ -42,4 +42,12 @@ class DB_Siswa extends CI_MOdel
     ];
     $this->db->insert('calon_siswa', $data);
   }
+  public function getDataCalonSiswa()
+  {
+    return $this->db->get('calon_siswa')->result();
+  }
+  public function DetailCalonSiswa($id)
+  {
+    return $this->db->get_where('calon_siswa', array('id' => $id))->row_array();
+  }
 }

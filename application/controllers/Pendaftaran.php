@@ -45,4 +45,25 @@ class Pendaftaran extends CI_Controller
       redirect('Home/index');
     }
   }
+  public function DataCalonSiswa()
+  {
+    $data['Title'] = 'SMA-IT Mutiara';
+    $data['SecondTitle'] = ' ~ Data Calon Siswa';
+    $data['user'] = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
+    $data['CalonSiswa'] = $this->DB_Siswa->getDataCalonSiswa();
+    $this->load->view('Template/Header', $data);
+    $this->load->view('CalonSiswa/daftarCalonSiswa', $data);
+    $this->load->view('Template/Sidebar');
+    $this->load->view('Template/Footer');
+  }
+  public function detailCalonSiswa($id){
+    $data['Title'] = 'SMA-IT Mutiara';
+    $data['SecondTitle'] = ' ~ Detail Data Calon Siswa';
+    $data['user'] = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
+    $data['CalonSiswa'] = $this->DB_Siswa->DetailCalonSiswa($id);
+    $this->load->view('Template/Header', $data);
+    $this->load->view('CalonSiswa/detailCalonSiswa', $data);
+    $this->load->view('Template/Sidebar');
+    $this->load->view('Template/Footer');
+  }
 }

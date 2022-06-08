@@ -22,7 +22,7 @@
 </body>
 <script>
   if (document.getElementById('swal')) {
-    swal("Congratulation", "Formulir kamu diterima.", "success");
+    swal("Congratulation", "Formulir kamu berhasil diterima.", "success");
   }
 </script>
 
