@@ -29,7 +29,7 @@
                             <h4>Total Calon Siswa</h4>
                         </div>
                         <div class="card-body">
-                            1,201
+                            <?= $TotalCalonSiswa; ?>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         <p class="lead">Kamu berhasil login ke web SMA-IT Mutiara.</p>
                         <p>Klik tombol Daftar jika ingin masuk ke SMA-IT Mutiara.</p>
                         <div class="mt-4 text-center">
-                            <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="fas fa-sign-in-alt"></i> Daftar Siswa </a>
+                            <a href="<?= site_url('Pendaftaran'); ?>" class="btn btn-outline-white btn-lg btn-icon icon-left"> <i class="fas fa-fw fa-user-graduate"></i></i> Daftar Siswa </a>
                         </div>
                     </div>
                 </div>

@@ -16,6 +16,7 @@ class Home extends CI_Controller
         $data['TotalUser'] = $this->DB_Siswa->TotalUser();
         $data['Title'] = 'SMA-IT Mutiara';
         $data['SecondTitle'] = ' ~ Home ';
+        $data['TotalCalonSiswa'] = $this->DB_Siswa->TotalCalonSiswa();
         $data['user'] = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
         $this->load->view('Template/Header', $data);
         $this->load->view('Template/Sidebar');
