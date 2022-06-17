@@ -1,3 +1,7 @@
+<?php if ($this->session->flashdata('Oke')) : ?>
+  <?= $this->session->flashdata('Oke'); ?>
+  <?php $this->session->unset_userdata('Oke'); ?>
+<?php endif; ?>
 <div class="main-content">
   <section class="section">
     <div class="section-header">
@@ -32,7 +36,13 @@
                       <td><?= $c->agama; ?></td>
                       <td style="text-transform:uppercase;"><?= $c->sekolah_asal; ?></td>
                       <td><?= $c->prestasi; ?></td>
-                      <td><a href="<?= site_url('Pendaftaran/detailCalonSiswa/') . $c->id; ?>" class="btn btn-icon btn-left btn-primary"><i class="fas fa-search-plus mr-1"></i>Detail</a></td>
+                      <td>
+                        <a href="<?= site_url('Pendaftaran/detailCalonSiswa/') . $c->id; ?>" class="btn btn-icon btn-left btn-primary">
+                          <i class="fas fa-search-plus mr-1"></i>Detail</a>
+                        <a href="<?= site_url('Pendaftaran/deleteCalonSiswa/') . $c->id; ?>" class="btn btn-icon btn-left btn-danger">
+                          <i class="fas fa-fw fa-user-times mr-1"></i>Hapus</a>
+                      </td>
+
                     </tr>
                   <?php endforeach; ?>
                 </table>

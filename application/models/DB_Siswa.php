@@ -50,4 +50,8 @@ class DB_Siswa extends CI_MOdel
   {
     return $this->db->get_where('calon_siswa', array('id' => $id))->row_array();
   }
+  public function deleteCalonSiswa($id)
+  {
+    return $this->db->delete('calon_siswa', array('id' => $id));
+  }
 }

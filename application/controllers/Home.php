@@ -13,9 +13,9 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['TotalUser'] = $this->DB_Siswa->TotalUser();
         $data['Title'] = 'SMA-IT Mutiara';
         $data['SecondTitle'] = ' ~ Home ';
+        $data['TotalUser'] = $this->DB_Siswa->TotalUser();
         $data['TotalCalonSiswa'] = $this->DB_Siswa->TotalCalonSiswa();
         $data['user'] = $this->db->get_where('user', array('email' => $this->session->userdata('email')))->row_array();
         $this->load->view('Template/Header', $data);

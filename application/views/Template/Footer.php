@@ -23,6 +23,8 @@
 <script>
   if (document.getElementById('swal')) {
     swal("Congratulation", "Formulir kamu berhasil diterima.", "success");
+  } else if (document.getElementById('Hapus')) {
+    swal("Success", 'Data Berhasil dihapus.', 'success');
   }
 </script>
 
